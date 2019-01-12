@@ -10,8 +10,13 @@
     <h1>The AJAXson 5</h1>
 
     <form id="form-gif-request" >
-        <label>What kind of Jackson 5 related gif do you want?</label>
+        <label for="tag">What kind of Jackson 5 related gif do you want?</label>
         <input name="tag" type="text" id="query"/>
+
+        <p>Prove you aren't a cop by solving this riddle:</p>
+        <input name ="captcha" type="number" id="captcha">
+        <label for="captcha">Jacksons are better than 1</label>
+        <p id="checkMessage"></p>
         <input type="submit" value="Get my Gif!" />
     </form>
 
