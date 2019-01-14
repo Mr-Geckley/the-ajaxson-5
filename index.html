@@ -2,26 +2,140 @@
 <html>
 <head>
     <title>The AJAXson 5</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Allan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo" rel="stylesheet">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="request-gif.js"></script>
     <meta charset="utf-8"/>
+<style>
+    body {
+        background-color: #e0e0eb;
+        font-family: 'Cardo';
+        font-size: 20px;
+        color: #4d0028;
+    }
+
+    h1 {
+        font-family: 'Allan';
+        font-size: 70px;
+        color: #4d0028;
+    }
+
+    .my_header {
+        margin: 20px;
+        margin-bottom: 20vh;
+    }
+
+    #gif {
+        height: 300px;
+    }
+
+    #status {
+        position: absolute;
+        bottom: 20vh;
+        
+    }
+    .my_button {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        
+    }
+
+    .my_button:hover {
+        transform: scale(1.2);
+    }
+
+    .jumbotron, .labels, .inputs, .my_button {
+        background-color: #ff794d;
+        border-radius: 10px;
+        box-shadow: 10px 10px 5px 0px rgba(84,56,84,0.7);
+    }
+
+    .inputs {
+        padding-bottom: 10vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    .labels {
+        padding-top: 10vh;
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
+
+    footer {
+        display: flex;
+        background-color: #4d0028; 
+        color: #e0e0eb;
+        width: 100%;
+        justify-content: center;
+        margin-top: 10vh;
+    }
+
+</style>
 </head>
 <body>
-    <h1>The AJAXson 5</h1>
+    <div class="jumbotron jumbotron-fluid my_header">
+        <div class="container">
+            <h1>The AJAXson 5</h1>
+        </div>
+    </div>
+   <div class="container justify-content-center">
+        <div class="row justify-content-center labels">
+                <div class="col-6">
+<!-- form start-->
+                    <form id="form-gif-request" >
+                            <label for="tag">What kind of Jackson 5 related gif do you want?</label>
+                            
+                            <p id="feedback" hidden="true"></p>
+                </div>
 
-    <form id="form-gif-request" >
-        <label for="tag">What kind of Jackson 5 related gif do you want?</label>
-        <input name="tag" type="text" id="query"/>
 
-        <p>Prove you aren't a cop by solving this riddle:</p>
-        <input name ="captcha" type="number" id="captcha">
-        <label for="captcha">Jacksons are better than 1</label>
-        <p id="checkMessage"></p>
-        <input type="submit" value="Get my Gif!" />
-    </form>
+                <div class="col-6">
+                    <p>Prove you aren't a cop by solving this riddle:</p>
+                    
+                    <label for="captcha">Jacksons are better than 1</label>
+                    <p id="checkMessage"></p>
+                </div>       
+            </div>
 
-    <img id="gif" src="" hidden="true"/>
-    <p id="feedback" hidden="true`"></p>
-    <div id="status">Loading...</div>
+            <div class="row justify-content-center inputs">
+                <div class="col-6">
+                        <input name="tag" type="text" id="query"/>
+                </div>
+                <div class="col-6">
+                        <input name ="captcha" type="number" id="captcha">       
+                </div>        
+                    
+            </div>
+            <div class="row justify-content-end">
+                <input class="my_button" type="submit" value="Gittin' giffy wit' it (nana-nana-nanana)" />
+            </div>
+                    </form>  
+<!-- form end -->
+
+            <div class="container">
+                    <div class="row justify-content-center">
+                            <img id="gif" src="" hidden="true"/>
+                        </div>
+                        <div class="row justify-content-center">    
+                            <img src="https://res.cloudinary.com/matthewgeckley/image/upload/v1547355666/39.gif" id="status"/>
+                    </div>
+            </div>
+   </div>
 </body>
+<footer>
+        <span>develped and desgined by: Matthew Geckley, technically.geckley@gmail.com</span>
+    </footer>
 </html>
