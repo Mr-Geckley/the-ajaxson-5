@@ -54,6 +54,7 @@ function fetchAndDisplayGif(event) {
                 // jQuery passes us the `response` variable, a regular javascript object created from the JSON the server gave us
                 
                 gifURL = response.data.image_url;
+                console.log(gifURL);
                 
                 
                 // TODO
